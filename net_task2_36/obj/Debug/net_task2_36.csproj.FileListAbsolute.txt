@@ -1,0 +1,9 @@
+D:\C#\net_task2_36\net_task2_36\bin\Debug\net_task2_36.exe
+D:\C#\net_task2_36\net_task2_36\bin\Debug\net_task2_36.pdb
+D:\C#\net_task2_36\net_task2_36\obj\Debug\net_task2_36.csproj.AssemblyReference.cache
+D:\C#\net_task2_36\net_task2_36\obj\Debug\net_task2_36.Form1.resources
+D:\C#\net_task2_36\net_task2_36\obj\Debug\net_task2_36.Properties.Resources.resources
+D:\C#\net_task2_36\net_task2_36\obj\Debug\net_task2_36.csproj.GenerateResource.cache
+D:\C#\net_task2_36\net_task2_36\obj\Debug\net_task2_36.csproj.CoreCompileInputs.cache
+D:\C#\net_task2_36\net_task2_36\obj\Debug\net_task2_36.exe
+D:\C#\net_task2_36\net_task2_36\obj\Debug\net_task2_36.pdb

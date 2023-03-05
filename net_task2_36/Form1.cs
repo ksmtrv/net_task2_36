@@ -29,7 +29,14 @@ namespace net_task2_36
                 textBox2.Clear();
                 textBox3.Clear();   
                 string s = textBox1.Text;
-                textBox2.Text += System.IO.File.ReadAllText(s + ".txt", System.Text.Encoding.UTF8);
+                using (StreamReader stream = new StreamReader(s + ".txt"))
+                {
+                    while (!stream.EndOfStream)                                                      
+                    {
+                        string line = stream.ReadLine();
+                        textBox2.Text += line + "\r\n";
+                    }
+                }
                 button2.Enabled = true;
 
             } catch {

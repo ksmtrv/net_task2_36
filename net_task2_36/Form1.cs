@@ -22,6 +22,17 @@ namespace net_task2_36
 
         }
 
+        private void printText(string s)
+        {
+            using (StreamReader stream = new StreamReader(s + ".txt"))
+            {
+                while (!stream.EndOfStream)
+                {
+                    string line = stream.ReadLine();
+                    textBox2.Text += line + "\r\n";
+                }
+            }
+        }
         private void button1_Click(object sender, EventArgs e)
         {
             try
@@ -29,16 +40,8 @@ namespace net_task2_36
                 textBox2.Clear();
                 textBox3.Clear();   
                 string s = textBox1.Text;
-                using (StreamReader stream = new StreamReader(s + ".txt"))
-                {
-                    while (!stream.EndOfStream)                                                      
-                    {
-                        string line = stream.ReadLine();
-                        textBox2.Text += line + "\r\n";
-                    }
-                }
+                printText(s);
                 button2.Enabled = true;
-
             } catch {
                 MessageBox.Show("Код ошибки: -1");
                 button2.Enabled= false;
@@ -46,18 +49,23 @@ namespace net_task2_36
 
         }
 
+        private int countRows(string s)
+        {
+            int i = 0;
+            using (StreamReader r = new StreamReader(s + ".txt"))
+            {
+                while (r.ReadLine() != null)
+                {
+                    i++;
+                }
+            }
+            return i;
+        }
         private void button2_Click(object sender, EventArgs e)
         {
             string s = textBox1.Text;
             try {
-                int i = 0;
-                using (StreamReader r = new StreamReader(s + ".txt"))
-                {
-                    while (r.ReadLine() != null)
-                    {
-                        i++;
-                    }
-                }
+                int i = countRows(s);
                 textBox3.Text = Convert.ToString(i);
             } catch {
                 MessageBox.Show("Код ошибки: -1");
